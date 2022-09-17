@@ -28,7 +28,7 @@ describe("When I try to calculate the sum of numbers", () => {
   });
 
   it("should return the same number with one number", () => {
-    expect(sum(2)).toEqual(2);
+    expect(sum(2)).toEqual(1);
   });
 
   it("should return sum with multiple numbers", () => {
