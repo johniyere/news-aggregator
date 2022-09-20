@@ -8,11 +8,16 @@ jobs:
   test_pull_request:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout repository code
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run test:unit
+      - name: Clean install node dependncies
+        run: npm ci
+      - name: Linting code
+        run: npm run lint
+      - name: Running unit tests
+        run: npm run test:unit
       - run: npm run build
