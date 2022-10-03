@@ -1,70 +1,57 @@
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+html,
+body {
+  width: 100vw;
+  height: 100vh;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.btn-white-shadow {
+  box-shadow: #d2d2d2 0px -6px 0px inset, #eeeeee 0px 0px 0px 2px inset,
+    #eeeeee 0px -8px 0px 0px inset;
 }
-a:hover {
-  color: #535bf2;
+
+.btn-ultramarine-shadow {
+  box-shadow: #7f9df9 0px -6px 0px inset, #e5ecff 0px 0px 0px 2px inset,
+    #e5ecff 0px -8px 0px 0px inset;
+}
+
+.btn-mustard-shadow {
+  box-shadow: #daa701 0px -6px 0px inset, #fff4d2 0px 0px 0px 2px inset,
+    #fff4d2 0px -8px 0px 0px inset;
+}
+
+@layer utilities {
+  .btn-ultramarine-active,
+  .btn-mustard-active,
+  .btn-white-active {
+    padding-bottom: 7px;
+    margin-top: 3px;
+    transform: translateY(3px);
+  }
+
+  .btn-ultramarine-active {
+    box-shadow: #7f9df9 0px -3px 0px inset, #e5ecff 0px 0px 0px 2px inset,
+      #e5ecff 0px -5px 0px 0px inset !important;
+  }
+
+  .btn-mustard-active {
+    box-shadow: #daa701 0px -3px 0px inset, #fff4d2 0px 0px 0px 2px inset,
+      #fff4d2 0px -5px 0px 0px inset !important;
+  }
+
+  .btn-white-active {
+    box-shadow: #d2d2d2 0px -3px 0px inset, #eeeeee 0px 0px 0px 2px inset,
+      #eeeeee 0px -5px 0px 0px inset !important;
+  }
+
+  .input-focus-shadow {
+    box-shadow: 0px 0px 0px 2px #3363ff40;
+  }
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  font-family: "Cabin", sans-serif;
 }
