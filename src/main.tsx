@@ -9,6 +9,7 @@ import Collections from "./routes/collections";
 import Root from "./routes/root";
 import Login from "./routes/login";
 import About from "./routes/about";
+import Collection from "./routes/collection";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "collections",
         element: <Collections />,
+      },
+      {
+        path: "collections/:collectionId",
+        element: <Collection />,
       },
       {
         path: "about",
